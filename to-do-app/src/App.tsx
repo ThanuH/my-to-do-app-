@@ -3,13 +3,16 @@ import React from 'react';
 import './Style/App.css';
 import './Style/Input.css'
 import InputField from './Components/InputField'
+// import image from './Images/back.jpg'
+// import { url } from 'inspector';
 
 const App: React.FC =() =>{
   return(
-    <div className='App'>
-      <span className='Heading'>To-Do-List</span> 
-      <span className='Text'>Lets Organize Your Day-To-Day Tasks</span>
+  
+    <div className="App" >
+      
       <InputField/>
+      
     </div>
   )
 }
