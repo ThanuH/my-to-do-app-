@@ -1,0 +1,12 @@
+.TitleBox{
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: left;
+}
+.DesBox{
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: left;
+}
