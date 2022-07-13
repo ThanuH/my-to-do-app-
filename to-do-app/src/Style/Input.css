@@ -1,12 +1,31 @@
 .TitleBox{
     display: flex;
     width: 90%;
+    height: 8%;
     position: relative;
     align-items: left;
 }
 .DesBox{
+    font-family: "SF Pro Display";
     display: flex;
     width: 90%;
+    height: 50%;
     position: relative;
     align-items: left;
+}
+.InputTxt{
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Button1{
+    position:absolute;
+    right: 350px;
+    bottom: 70px;
+}
+.Button2{
+    position:absolute;
+    right: 360px;
+    bottom: 40px;
 }

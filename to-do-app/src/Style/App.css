@@ -8,7 +8,7 @@
     background-image: url("../Images/back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity:0.2;
+    /* opacity:0.2; */
     position: relative;
     
 }
@@ -16,7 +16,7 @@
 
 .Heading{
     font-family: "SF Pro Display";
-    padding-top: 50px;
+    padding-top: 20px;
     font-size: 64px;
     font-weight: bold;
     color: #444343;
@@ -27,11 +27,11 @@
 
 .Text{
     font-family: "SF Pro Display";
-    padding-top:10px;
+    /* padding-top: -70px; */
     font-size: 25px;
     font-weight: bold;
     color: #444343;
     text-align: center;
     z-index: 1;
-    padding-bottom: 90px;
+    padding-bottom: 10px;
 }
