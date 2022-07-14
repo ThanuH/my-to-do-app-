@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Style/App.css'
-const Sub =() =>{
+import "../../Style/App.css"
+const ViewList =() =>{
     return <form className='form'>
         <div className='App'>
         <h1 className='Heading'>To-Do-List</h1> 
@@ -9,4 +9,4 @@ const Sub =() =>{
     </form>
 };
 
-export default Sub;
+export default ViewList;

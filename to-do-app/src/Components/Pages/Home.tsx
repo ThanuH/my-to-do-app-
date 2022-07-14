@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
-import '../Style/App.css';
+import '../../Style/App.css';
 
 
 const Home =() =>{
     const history = useHistory();
-    const subPage =()=>{history.push("/sub")}
+    const nextPage =()=>{history.push("/view-list")}
     
     return( 
     <div className='App'>
@@ -17,7 +17,7 @@ const Home =() =>{
         <p className='InputTxt'>Enter the description of the task</p>
         <textarea placeholder='Enter task description' className='DesBox'/>
         <button type='button'  className='Button1'>Add to task list</button>
-        <button type='button'  className='Button2' onClick={subPage}>View task list</button>
+        <button type='button'  className='Button2' onClick={nextPage}>View task list</button>
     </form>
     </div>
     )

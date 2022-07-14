@@ -2,9 +2,10 @@ import React from "react";
 
 //import logo from './logo.svg';
 
-import "./Style/App.css";
-import "./Style/Input.css";
-import Home from "../Components/Pages/Home";
+import '../Style/App.css';
+import "../Style/Input.css";
+import Home from "./Pages/Home";
+import ViewList from "./Pages/ViewList"
 // import image from './Images/back.jpg'
 // import { url } from 'inspector';
 
@@ -14,8 +15,8 @@ const App: React.FC = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={InputField} />
-        <Route exact path="/" component={InputField} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/view-list" component={ViewList} />
       </Switch>
     </Router>
   );
