@@ -1,3 +1,5 @@
+@import 'antd/dist/antd.css';
+
 .TitleBox{
     display: flex;
     width: 90%;
@@ -8,24 +10,24 @@
 .DesBox{
     font-family: "SF Pro Display";
     display: flex;
-    width: 90%;
-    height: 50%;
+    width: 101%;
+    height: 100%;
     position: relative;
     align-items: left;
 }
 .InputTxt{
     font-family: "SF Pro Display";
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .Button1{
     position:absolute;
-    right: 350px;
-    bottom: 70px;
+    right: 330px;
+    bottom: 140px;
 }
 .Button2{
     position:absolute;
-    right: 360px;
-    bottom: 40px;
+    right: 342px;
+    bottom: 100px;
 }
