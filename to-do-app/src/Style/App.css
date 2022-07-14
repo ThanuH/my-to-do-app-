@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     z-index: 0;
-    background-image: url("../Images/back.jpg");
+    background-image: url("../Images/40pback.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* opacity:0.2; */
@@ -16,7 +16,7 @@
 
 .Heading{
     font-family: "SF Pro Display";
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 64px;
     font-weight: bold;
     color: #444343;
@@ -27,11 +27,10 @@
 
 .Text{
     font-family: "SF Pro Display";
-    /* padding-top: -70px; */
     font-size: 25px;
     font-weight: bold;
     color: #444343;
     text-align: center;
     z-index: 1;
-    padding-bottom: 10px;
+    
 }
