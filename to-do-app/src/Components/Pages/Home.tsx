@@ -7,6 +7,8 @@ import { Button,  Form, Input } from "antd";
 const Home = () => {
 const [viewList, setViewList]= useState<any>([]);
 
+
+
   const history = useHistory();
   const nextPage = () => {
     history.push({pathname:"/view-list",state:viewList });

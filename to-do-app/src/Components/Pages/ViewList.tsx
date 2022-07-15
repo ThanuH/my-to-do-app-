@@ -53,10 +53,9 @@ const ViewList = () => {
             style={{ backgroundColor: "#F05252" }}
             size="small"
             type="primary"danger
-            onClick={(event) =>listClick(event,index)
-            }
+            // onClick={(event) =>listClick(event,index)}
           >
-            <p>{item.title}:{item.description}</p>
+            {/* <p>{item.title}:{item.description}</p> */}
           </Button>
         ))}
       </Card>
