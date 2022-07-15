@@ -34,3 +34,10 @@
     z-index: 1;
     
 }
+.site-card-border-less-wrapper {
+    background: #68B3F9;
+    text-align: center;
+    height: 50%;
+    width: 30%;
+    
+  }

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 import '../Style/App.css';
 import "../Style/Input.css";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home"; 
 import ViewList from "./Pages/ViewList"
 // import image from './Images/back.jpg'
 // import { url } from 'inspector';
@@ -13,7 +13,7 @@ import ViewList from "./Pages/ViewList"
 import {BrowserRouter as Router,Switch,Route,Redirect,} from "react-router-dom";
 
 const App: React.FC = () => {
-  const [todo, setTodo] = useState<string>("");
+
 
   return (
     <Router>

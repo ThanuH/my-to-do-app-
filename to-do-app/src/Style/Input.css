@@ -2,15 +2,15 @@
 
 .TitleBox{
     display: flex;
-    width: 90%;
+    width: 150%;
     height: 8%;
     position: relative;
-    align-items: left;
+    align-items: center;
 }
 .DesBox{
     font-family: "SF Pro Display";
     display: flex;
-    width: 101%;
+    width: 223%;
     height: 100%;
     position: relative;
     align-items: left;
@@ -23,11 +23,11 @@
 
 .Button1{
     position:absolute;
-    right: 320px;
-    bottom: 140px;
+    left: 270px;
+    bottom: 280px;
 }
 .Button2{
     position:absolute;
-    right: 332px;
-    bottom: 100px;
+    left: 270px;
+    bottom: 290px;
 }

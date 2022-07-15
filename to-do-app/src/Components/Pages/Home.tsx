@@ -1,26 +1,81 @@
-import React from 'react';
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import '../../Style/App.css';
-import { Input } from 'antd';
-import { Button } from 'antd';
+import "../../Style/App.css";
+import { Button,  Form, Input } from "antd";
 
 
-const { TextArea } = Input;
-const Home =() =>{
-    const history = useHistory();
-    const nextPage =()=>{history.push("/view-list")}
-    return( 
-    <div className='App'>
-    <form >   
-        <h1 className='Heading'>To-Do-List</h1> 
-        <p className='Text'>Lets Organize Your Day-To-Day Tasks</p>
-        <p className='InputTxt'>Enter your To-Do</p>
-        <TextArea showCount maxLength={100} style={{ height: 272 }} placeholder='Type Here' className='DesBox'/>
-        <Button type="primary"  className='Button1'>Add to To-Do list</Button>
-        <Button type="primary"  className='Button2' onClick={nextPage}>View To-Do list</Button>
-    </form>
+const Home = () => {
+const [viewList, setViewList]= useState<any>([]);
+
+  const history = useHistory();
+  const nextPage = () => {
+    history.push({pathname:"/view-list",state:viewList });
+  };
+  const onFinish = (values: any) => {
+    console.log("Success:", values);
+    setViewList([values]);
+    console.log(viewList);
+  };
+
+  const onFinishFailed = (errorInfo: any) => {
+    console.log("Failed:", errorInfo);
+  };
+
+  return (
+    <div className="App">
+      <h1 className="Heading">To-Do-List</h1>
+      <p className="Text">Lets Organize Your Day-To-Day Tasks</p>
+
+      <Form
+        name="basic"
+        labelCol={{ span: 8 }}
+        wrapperCol={{ span: 16 }}
+        initialValues={{ remember: true }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off"
+      >
+        <p className="InputTxt">Enter your To-Do</p>
+        <Form.Item
+          name="title"
+          className="TitleBox"
+          rules={[
+            { required: true, message: "Please enter title for the task!" },
+          ]}
+        >
+          <Input
+            placeholder="Enter task title"
+            size="large"
+            className="TitleBox"
+          />
+        </Form.Item>
+        <br/>
+        
+
+        <p className="InputTxt">Enter the task description</p>
+        <Form.Item
+        name="description"
+        className="DesBox"
+        rules={[{ required: true, message: 'Please enter the description' }]}
+      >
+        <Input.TextArea showCount maxLength={100} />
+      </Form.Item>
+
+        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+          <Button type="primary" htmlType="submit" className="Button1">
+            Add to task list
+          </Button>
+        </Form.Item>
+        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+        <Button type="primary" className="Button2" onClick={nextPage}>
+          View task list
+        </Button>
+        </Form.Item>
+
+
+      </Form>
     </div>
-    )
+  );
 };
 
 export default Home;
