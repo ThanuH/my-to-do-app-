@@ -17,8 +17,8 @@ const ViewList = () => {
     setNewList(state.state);
   }, [newList]);
 
-  const listClick = (index: any) => {
-    console.log("Failed:", index);
+  const listClick = (event:any ,index:number) => {
+    console.log("Failed:",index );
   };
 
   return (
@@ -27,21 +27,40 @@ const ViewList = () => {
       <p className="Text">Lets Organize Your Day-To-Day Tasks</p>
 
       <Card
-        title="To-do-List"
-        className="site-card-border-less-wrapper"
-        style={{ backgroundColor: "#68B3F9" }}
+        title="Task List"
+        className="task-list"
+        style={{ backgroundColor: "#68B3F9"}}
       >
         {newList.map((item: any, index: number) => (
-          <Button
+          <Button block
             style={{ backgroundColor: "#4788E8" }}
             size="small"
-            onChange={(index) => listClick(index)}
+            type="primary"
+            onClick={(event) =>listClick(event,index)
+            }
           >
-            <h3>{item.title} </h3>
-            <p>{item.description}</p>
+            <p>{item.title}:{item.description}</p>
           </Button>
         ))}
       </Card>
+      <Card
+        title="To-do-List"
+        className="to-do-list"
+        style={{ backgroundColor: "#FE5757"}}
+      >
+        {newList.map((item: any, index: number) => (
+          <Button block
+            style={{ backgroundColor: "#F05252" }}
+            size="small"
+            type="primary"danger
+            onClick={(event) =>listClick(event,index)
+            }
+          >
+            <p>{item.title}:{item.description}</p>
+          </Button>
+        ))}
+      </Card>
+      
     </div>
   );
 };
