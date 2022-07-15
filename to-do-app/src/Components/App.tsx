@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 //import logo from './logo.svg';
@@ -13,6 +13,8 @@ import ViewList from "./Pages/ViewList"
 import {BrowserRouter as Router,Switch,Route,Redirect,} from "react-router-dom";
 
 const App: React.FC = () => {
+  const [todo, setTodo] = useState<string>("");
+
   return (
     <Router>
       <Switch>
