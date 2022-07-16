@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../../Style/App.css";
-import { Button,  Form, Input } from "antd";
-
+import { Button, Form, Input } from "antd";
 
 const Home = () => {
-const [viewList, setViewList]= useState<any>([]);
-
-
+  const [viewList, setViewList] = useState<any>([]);
 
   const history = useHistory();
   const nextPage = () => {
-    history.push({pathname:"/view-list",state:viewList });
+    history.push({ pathname: "/view-list", state: viewList });
   };
   const onFinish = (values: any) => {
-    console.log("Success:", values);
-    setViewList([values]);
-    console.log(viewList);
+    setViewList([...viewList, values]);
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -51,17 +46,16 @@ const [viewList, setViewList]= useState<any>([]);
             className="TitleBox"
           />
         </Form.Item>
-        <br/>
-        
+        <br />
 
         <p className="InputTxt">Enter the task description</p>
         <Form.Item
-        name="description"
-        className="DesBox"
-        rules={[{ required: true, message: 'Please enter the description' }]}
-      >
-        <Input.TextArea showCount maxLength={100} />
-      </Form.Item>
+          name="description"
+          className="DesBox"
+          rules={[{ required: true, message: "Please enter the description" }]}
+        >
+          <Input.TextArea showCount maxLength={100} />
+        </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit" className="Button1">
@@ -69,12 +63,10 @@ const [viewList, setViewList]= useState<any>([]);
           </Button>
         </Form.Item>
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" className="Button2" onClick={nextPage}>
-          View task list
-        </Button>
+          <Button type="primary" className="Button2" onClick={nextPage}>
+            View task list
+          </Button>
         </Form.Item>
-
-
       </Form>
     </div>
   );
