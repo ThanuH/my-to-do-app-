@@ -10,9 +10,9 @@
 .DesBox{
     font-family: "SF Pro Display";
     display: flex;
-    width: 223%;
-    height: 100%;
-    position: relative;
+    width: 36%;
+    height: 180%;
+    position: absolute;
     align-items: left;
 }
 .InputTxt{
@@ -24,10 +24,15 @@
 .Button1{
     position:absolute;
     left: 270px;
-    bottom: 280px;
+
 }
 .Button2{
-    position:absolute;
+    position:relative;
     left: 270px;
-    bottom: 290px;
+
+}
+.Button3{
+    position: relative;
+    left: 340px;
+    bottom:15px ;
 }

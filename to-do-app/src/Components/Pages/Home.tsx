@@ -18,6 +18,8 @@ const Home = () => {
     console.log("Failed:", errorInfo);
   };
 
+  
+
   return (
     <div className="App">
       <h1 className="Heading">To-Do-List</h1>
@@ -54,7 +56,10 @@ const Home = () => {
           className="DesBox"
           rules={[{ required: true, message: "Please enter the description" }]}
         >
-          <Input.TextArea showCount maxLength={100} />
+          <Input.TextArea 
+          showCount 
+          maxLength={100}
+          placeholder="Enter task description" />
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
@@ -66,6 +71,11 @@ const Home = () => {
           <Button type="primary" className="Button2" onClick={nextPage}>
             View task list
           </Button>
+        </Form.Item>
+        <Form.Item>
+        <Button htmlType="reset" type="primary" className="Button3">
+          Reset
+        </Button>
         </Form.Item>
       </Form>
     </div>

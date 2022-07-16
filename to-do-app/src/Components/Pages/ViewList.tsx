@@ -17,8 +17,8 @@ const ViewList = () => {
     setNewList(state.state);
   }, [newList]);
 
-  const listClick = (event:any ,index:number) => {
-    console.log("Failed:",index );
+  const listClick = (event: any, index: number) => {
+    console.log("Failed:", index);
   };
 
   return (
@@ -29,37 +29,37 @@ const ViewList = () => {
       <Card
         title="Task List"
         className="task-list"
-        style={{ backgroundColor: "#68B3F9"}}
+        style={{ backgroundColor: "#68B3F9" }}
       >
         {newList.map((item: any, index: number) => (
-          <Button block
+          <Button
+            block
             style={{ backgroundColor: "#4788E8" }}
             size="small"
             type="primary"
-            onClick={(event) =>listClick(event,index)
-            }
+            onClick={(event) => listClick(event, index)}
           >
-            <p>{item.title}:{item.description}</p>
+            <p>
+              {item.title}:{item.description}
+            </p>
           </Button>
         ))}
       </Card>
       <Card
         title="To-do-List"
         className="to-do-list"
-        style={{ backgroundColor: "#FE5757"}}
+        style={{ backgroundColor: "#FE5757" }}
       >
         {newList.map((item: any, index: number) => (
-          <Button block
+          <Button
+            block
             style={{ backgroundColor: "#F05252" }}
             size="small"
-            type="primary"danger
-            // onClick={(event) =>listClick(event,index)}
-          >
-            {/* <p>{item.title}:{item.description}</p> */}
-          </Button>
+            type="primary"
+            danger
+          ></Button>
         ))}
       </Card>
-      
     </div>
   );
 };
