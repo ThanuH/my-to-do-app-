@@ -12,6 +12,7 @@ const Home = () => {
   };
   const onFinish = (values: any) => {
     setViewList([...viewList, values]);
+    console.log("Data Entered So Far=>",viewList);
   };
 
   const onFinishFailed = (errorInfo: any) => {
