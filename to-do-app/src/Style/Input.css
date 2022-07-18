@@ -1,0 +1,38 @@
+@import 'antd/dist/antd.css';
+
+.TitleBox{
+    display: flex;
+    width: 150%;
+    height: 8%;
+    position: relative;
+    align-items: center;
+}
+.DesBox{
+    font-family: "SF Pro Display";
+    display: flex;
+    width: 36%;
+    height: 180%;
+    position: absolute;
+    align-items: left;
+}
+.InputTxt{
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Button1{
+    position:absolute;
+    left: 270px;
+
+}
+.Button2{
+    position:relative;
+    left: 270px;
+
+}
+.Button3{
+    position: relative;
+    left: 340px;
+    bottom:15px ;
+}
